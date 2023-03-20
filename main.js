@@ -945,7 +945,7 @@ Element.prototype.drawServerChoose = function(region) {
             };
             serverChoices.regions.push(regionObj);
             new Element (region.location.left, region.location.top).drawServer(`${region.regionName}`);
-            $('#text').html('<p>Chooseminimum two additional spots for ByteCloud and press <span class="button__start__check blocked">Start</span></p>');
+            $('#text').html('<p>Choose minimum two additional spots for ByteCloud and press <span class="button__start__check blocked">Start</span></p>');
           } else {
             const regionObj = {
                 regionName: `${region.regionName}`,
@@ -972,10 +972,10 @@ Element.prototype.drawServerChoose = function(region) {
                                 setTimeout(() => {
                                     $('.results__container').css({
                                         'z-index':3,
-                                        'display':'grid'});
+                                        'display':'flex'});
                                     drawAllResults (byteCloudResults.regions, "result__container__byteCloud");
                                     drawAllResults (objectStorageResult.regions, "result__container__objectStorage");
-                                    $('#text').html('<p>Do you Want to <a href="">start again?</a></p>');
+                                    $('#text').html('<p>Do you want to <a href="">start again?</a></p>');
                                 }, 1500);
                             });
                         }, 2000);
@@ -991,10 +991,10 @@ Element.prototype.drawServerChoose = function(region) {
                             setTimeout(() => {
                                 $('.results__container').css({
                                     'z-index':3,
-                                    'display':'grid'});
+                                    'display':'flex'});
                                 drawAllResults (byteCloudResults.regions, "result__container__byteCloud");
                                 drawAllResults (objectStorageResult.regions, "result__container__objectStorage");
-                                $('#text').html('<p>Do you Want to <a href="">start again?</a></p>');
+                                $('#text').html('<p>Do you want to <a href="">start again?</a></p>');
                             }, 1500);
                         });
                     }, 2000);
